@@ -22,7 +22,7 @@ const Hero = () => {
           <Link
             href={api.hero.cv.link}
             target="_blank"
-            className="w-36 h-12 text-black font-bold bg-[#f2f2f2] border rounded-lg flex items-center justify-center gap-1"
+            className="w-12 h-12 text-black font-bold bg-[#f2f2f2] border rounded-lg flex items-center justify-center gap-1"
           >
             {api.hero.cv.title}
             <i className="fa-regular fa-file"></i> {/* Icon for CV */}
