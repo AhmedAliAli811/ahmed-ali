@@ -67,7 +67,7 @@ import whatsapp from "@/images/icons/icons8-whatsapp-logo-94.png";
                 },
             ],
             cv: {
-                title: "View My CV",
+                title: "CV",
                 link: "https://drive.google.com/file/d/1GYh16cKKJHiHcvC6rXbrFEC6gqGUG1n0/view?usp=sharing",
             },
         },
