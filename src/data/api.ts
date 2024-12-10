@@ -5,10 +5,10 @@ import p13 from "@/images/Project1/3-SSRS_Report.png";
 import p21 from "@/images/project4/report.png";
 
 
-// import p31 from "@/images/Project3/1-Home_Dashboard.png";
-// import p32 from "@/images/Project3/2-Movies_Dasboard.png";
-// import p33 from "@/images/Project3/3-Crews_Dashboard.png";
-// import p34 from "@/images/Project3/4-Database_Schema.png";
+import p31 from "@/images/project3/home.png";
+import p32 from "@/images/project3/movies.png";
+import p33 from "@/images/project3/cast.png";
+import p34 from "@/images/project3/schema.png";
 
 import P41 from "@/images/Project2/1-Home.png";
 import P42 from "@/images/Project2/2-Actions.png";
@@ -117,29 +117,29 @@ import whatsapp from "@/images/icons/icons8-whatsapp-logo-94.png";
                 },
                 gitUrl: "https://github.com/AhmedAliAli811/Customer-Segmentation-/tree/main",
             },
-            // {
-            //     title: "Movie Industry Analysis",
-            //     description:
-            //         "The TMDB Data Analysis project leverages the TMDB movie database to analyze various aspects of film performance, focusing on profitability, crew and cast roles, and viewer ratings. The primary goal is to gain deeper insights into movie success factors by integrating, cleaning, and enriching the data, and then analyzing it through a Power BI dashboard.",
-            //     imgs: [p31, p32, p33, p34],
-            //     features: {
-            //         title: "Key Features",
-            //         items: [
-            //             "Box Office Analysis: Visualizations of revenue trends across years, genres, and regions.",
-            //             "Genre Popularity: Insights into trending genres over time.",
-            //             "Revenue Breakdown: Comparison of production budgets versus box office returns.",
-            //         ],
-            //     },
-            //     tools: {
-            //         title: "Tools used",
-            //         items: [
-            //             {tool: "Power Bi", img: powerbi},
-            //             {tool: "SQL Server", img: sql},
-            //             {tool: "Python", img: python},
-            //         ],
-            //     },
-            //     gitUrl: "https://github.com/AhmedAliAli811/Movie-Analysis-Depi-GP",
-            // },
+            {
+                title: "Movie Industry Analysis",
+                description:
+                    "The TMDB Data Analysis project leverages the TMDB movie database to analyze various aspects of film performance, focusing on profitability, crew and cast roles, and viewer ratings. The primary goal is to gain deeper insights into movie success factors by integrating, cleaning, and enriching the data, and then analyzing it through a Power BI dashboard.",
+                imgs: [p31, p32, p33, p34],
+                features: {
+                    title: "Key Features",
+                    items: [
+                        "Box Office Analysis: Visualizations of revenue trends across years, genres, and regions.",
+                        "Genre Popularity: Insights into trending genres over time.",
+                        "Revenue Breakdown: Comparison of production budgets versus box office returns.",
+                    ],
+                },
+                tools: {
+                    title: "Tools used",
+                    items: [
+                        {tool: "Power Bi", img: powerbi},
+                        {tool: "SQL Server", img: sql},
+                        {tool: "Python", img: python},
+                    ],
+                },
+                gitUrl: "https://github.com/AhmedAliAli811/Movie-Analysis-Depi-GP",
+            },
             {
                 title: "HR Dashboard",
                 description:
