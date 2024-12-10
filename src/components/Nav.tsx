@@ -106,25 +106,25 @@ const NavBar = () => {
         </Link>
         <div className="flex space-x-6">
           <Link
-            href="#about"
+            href="/#about"
             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
           >
             About Me
           </Link>
           <Link
-            href="#exper"
+            href="/#exper"
             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
           >
             Experience
           </Link>
           <Link
-            href="#projects"
+            href="/#projects"
             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
           >
             Projects
           </Link>
           <Link
-            href="#skills"
+            href="/#skills"
             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
           >
             Skills
