@@ -1,18 +1,18 @@
-import p11 from "@/images/Project1/Inventory_Dashboard.png";
-import p12 from "@/images/Project1/Sales_Dashboard.png";
-import p13 from "@/images/Project1/SSRS_Report.png";
+import p11 from "@/images/Project1/1-Inventory_Dashboard.png";
+import p12 from "@/images/Project1/2-Sales_Dashboard.png";
+import p13 from "@/images/Project1/3-SSRS_Report.png";
 
 import p21 from "@/images/project4/report.png";
 
 
-import p31 from "@/images/Project3/home.png";
-import p32 from "@/images/Project3/movies.png";
-import p33 from "@/images/Project3/cast.png";
-import p34 from "@/images/Project3/schema.png";
+import p31 from "@/images/Project3/1-Home_Dashboard.png";
+import p32 from "@/images/Project3/2-Movies_Dasboard.png";
+import p33 from "@/images/Project3/3-Crews_Dashboard.png";
+import p34 from "@/images/Project3/4-Database_Schema.png";
 
-import P41 from "@/images/Project2/Home.png";
-import P42 from "@/images/Project2/Actions.png";
-import P43 from "@/images/Project2/Details.png";
+import P41 from "@/images/Project2/1-Home.png";
+import P42 from "@/images/Project2/2-Actions.png";
+import P43 from "@/images/Project2/3- Details.png";
 
 import p5 from "@/images/project5/dashboard.png";
 
