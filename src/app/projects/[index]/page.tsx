@@ -366,9 +366,9 @@ const Project: React.FC<ProjectProps> = ({params}) => {
                 </ul>
             </div>
             {/* Tools Section */}
-            <div className="w-full lg:w-11/12 mt-4">
+            <div className="w-full  mt-4">
                 <h2 className="text-2xl font-bold">Tools Used</h2>
-                <ul className="list-disc list-inside space-y-2 mt-3">
+                <ul className="list-disc list-inside space-y-2 mt-3 flex gap-5 flex-wrap">
                     {project.tools.items.map((tool, idx) => (
                         <li key={idx} className="flex items-center gap-2">
                             <Image src={tool.img} alt={tool.tool} width={50} height={50}/>
