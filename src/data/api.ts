@@ -5,10 +5,10 @@ import p13 from "@/images/Project1/3-SSRS_Report.png";
 import p21 from "@/images/project4/report.png";
 
 
-import p31 from "@/images/Project3/1-Home_Dashboard.png";
-import p32 from "@/images/Project3/2-Movies_Dasboard.png";
-import p33 from "@/images/Project3/3-Crews_Dashboard.png";
-import p34 from "@/images/Project3/4-Database_Schema.png";
+import p31 from "@/images/Project3/1.png";
+import p32 from "@/images/Project3/2.png";
+import p33 from "@/images/Project3/3.png";
+import p34 from "@/images/Project3/4.png";
 
 import P41 from "@/images/Project2/1-Home.png";
 import P42 from "@/images/Project2/2-Actions.png";
