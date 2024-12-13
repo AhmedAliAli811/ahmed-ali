@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 
@@ -43,24 +43,28 @@ const NavBar = () => {
           <Link
             href="/#about"
             className="block px-4 py-2 hover:bg-[#ccad00] hover:text-gray-900 rounded-lg transition duration-300 md:inline"
+            onClick={() => setIsMenuOpen(false)} // Close menu on click
           >
             About Me
           </Link>
           <Link
             href="/#exper"
             className="block px-4 py-2 hover:bg-[#ccad00] hover:text-gray-900 rounded-lg transition duration-300 md:inline"
+            onClick={() => setIsMenuOpen(false)} // Close menu on click
           >
             Experience
           </Link>
           <Link
             href="/#projects"
             className="block px-4 py-2 hover:bg-[#ccad00] hover:text-gray-900 rounded-lg transition duration-300 md:inline"
+            onClick={() => setIsMenuOpen(false)} // Close menu on click
           >
             Projects
           </Link>
           <Link
             href="/#skills"
             className="block px-4 py-2 hover:bg-[#ccad00] hover:text-gray-900 rounded-lg transition duration-300 md:inline"
+            onClick={() => setIsMenuOpen(false)} // Close menu on click
           >
             Skills
           </Link>
