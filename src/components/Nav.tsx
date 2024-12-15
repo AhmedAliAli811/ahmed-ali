@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
