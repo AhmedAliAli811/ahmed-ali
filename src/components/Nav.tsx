@@ -1,93 +1,3 @@
-// "use client"
-// import React, { useState } from "react";
-// import Link from "next/link";
-//
-// const NavBar = () => {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//
-//   return (
-//     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-800 text-white py-4 font-bold shadow-lg">
-//       <div className="mx-auto flex items-center justify-between px-6">
-//         {/* Logo */}
-//         <Link href="/" className="text-xl font-bold font-bokor">
-//           Ahmed Ali
-//         </Link>
-//
-//         {/* Burger Menu Icon */}
-//         <button
-//           className="block md:hidden text-white focus:outline-none"
-//           onClick={() => setIsMenuOpen(!isMenuOpen)}
-//         >
-//           <i className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"} text-2xl`}></i>
-//         </button>
-//
-//         {/* Links for Desktop */}
-//         <div className="hidden md:flex space-x-6">
-//           <Link
-//             href="/#about"
-//             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
-//           >
-//             About Me
-//           </Link>
-//           <Link
-//             href="/#exper"
-//             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
-//           >
-//             Experience
-//           </Link>
-//           <Link
-//             href="/#projects"
-//             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
-//           >
-//             Projects
-//           </Link>
-//           <Link
-//             href="/#skills"
-//             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
-//           >
-//             Skills
-//           </Link>
-//         </div>
-//       </div>
-//
-//       {/* Links for Mobile */}
-//       {isMenuOpen && (
-//         <div className="md:hidden bg-gray-800 flex flex-col space-y-4 px-6 py-4">
-//           <Link
-//             href="/#about"
-//             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
-//             onClick={() => setIsMenuOpen(false)}
-//           >
-//             About Me
-//           </Link>
-//           <Link
-//             href="/#exper"
-//             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
-//             onClick={() => setIsMenuOpen(false)}
-//           >
-//             Experience
-//           </Link>
-//           <Link
-//             href="/#projects"
-//             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
-//             onClick={() => setIsMenuOpen(false)}
-//           >
-//             Projects
-//           </Link>
-//           <Link
-//             href="/#skills"
-//             className="hover:bg-[#ccad00] hover:text-gray-900 px-4 py-2 rounded-lg transition duration-300"
-//             onClick={() => setIsMenuOpen(false)}
-//           >
-//             Skills
-//           </Link>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// };
-//
-// export default NavBar;
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
@@ -96,7 +6,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 text-white py-4 font-bold shadow-lg">
+    <nav className="fixed top-0 left-0 bottom-0 right-0 z-50 text-white py-4 font-bold shadow-lg">
       <div className="mx-auto flex items-center justify-between px-6">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold font-bokor">
