@@ -16,12 +16,18 @@ import P43 from "@/images/Project2/3- Details.png";
 
 import p5 from "@/images/project5/dashboard.png";
 
+import p61 from "@/images/project6/Main.png"
+import p62 from "@/images/project6/Filter.png"
+import p63 from "@/images/project6/Filtered.png"
+import p64 from "@/images/project6/DataModel.png"
+
 import linkedin from "@/images/icons/icons8-linkedin-logo-48.png";
 import github from "@/images/icons/icons8-github-logo-94.png";
 import mail from "@/images/icons/icons8-mail-50.png";
 
 import dataanalytics from "@/images/icons/icons8-data-analytics-53.png";
 import powerbi from "@/images/icons/icons8-power-bi-2021-48.png";
+import powerquery from "@/images/icons/icons8-query-inner-join-right-48.png";
 import sql from "@/images/icons/icons8-sql-server-48.png";
 import mysql from "@/images/icons/icons8-mysql-48.png";
 import postgresql from "@/images/icons/icons8-postgresql-100.png";
@@ -38,42 +44,67 @@ import plotly from "@/images/icons/plotly_.png";
 import looker from "@/images/icons/icons8-google-looker-48.png";
 import whatsapp from "@/images/icons/icons8-whatsapp-logo-94.png";
 
-    const api = {
-        hero: {
-            title: "Hi, I'm ",
-            name:"Ahmed Ali Ali",
-            description:
-                "A Fresh BI Engineer and Data Analyst with a knack for building insights.",
-            social: [
-                {
-                    link: "https://github.com/AhmedAliAli811",
-                    img: github,
-                    title:'Github'
-                },
-                {
-                    link: "https://www.linkedin.com/in/ahmedalialy/",
-                    img: linkedin,
-                    title:"Linkedin"
-                },
-                {
-                    link: "mailto:aly869556@gmail.com",
-                    img: mail,
-                    title:"Mail"
-                },
-                {
-                    link: "https://wa.me/+201142092491", // Replace with your number in the format: countrycode+number
-                    img: whatsapp,
-                    title:"WhatsApp"
-                },
-            ],
-            cv: {
-                title: "View my CV",
-                link: "https://drive.google.com/file/d/1VU1sbQOVgjzrLpWp_v2eK-eHPTxsoVKd/view?usp=sharing",
+const api = {
+    hero: {
+        title: "Hi, I'm ",
+        name: "Ahmed Ali Ali",
+        description:
+            "A Fresh BI Engineer and Data Analyst with a knack for building insights.",
+        social: [
+            {
+                link: "https://github.com/AhmedAliAli811",
+                img: github,
+                title: 'Github'
             },
+            {
+                link: "https://www.linkedin.com/in/ahmedalialy/",
+                img: linkedin,
+                title: "Linkedin"
+            },
+            {
+                link: "mailto:aly869556@gmail.com",
+                img: mail,
+                title: "Mail"
+            },
+            {
+                link: "https://wa.me/+201142092491", // Replace with your number in the format: countrycode+number
+                img: whatsapp,
+                title: "WhatsApp"
+            },
+        ],
+        cv: {
+            title: "View my CV",
+            link: "https://drive.google.com/file/d/1VU1sbQOVgjzrLpWp_v2eK-eHPTxsoVKd/view?usp=sharing",
         },
+    },
     projects: {
         title: "Projects",
         items: [
+            {
+                title: "FlipMart E-commerce Sales Dashboard",
+                description: `The main purpose of this project was to apply <strong>data modeling</strong> and <strong>data warehouse concepts</strong> to structure and analyze e-commerce business data effectively. Using <strong>Power BI</strong> and <strong>Power Query</strong>, I transformed raw, unstructured data into a well-organized data model, implementing a <strong>star schema</strong> to enable efficient querying and scalable analysis. This involved creating fact and dimension tables to represent sales, customers, products, and time, ensuring optimal performance for analytical queries. Additionally, I conducted in-depth analysis to uncover insights into sales performance, customer behavior, operational efficiency, and profitability. Through interactive dashboards and visualizations in <strong>Power BI</strong>. This project highlights my ability to leverage <strong>Power BI</strong> and <strong>Power Query</strong> for data modeling, analysis, and visualization, driving data-driven decision-making and business growth.`,
+                imgs: [p61 , p62 , p63 , p64],
+                features: {
+                    title: "Key Features",
+                    items: [
+                        "<strong>Data Modeling</strong>: Designed a star schema with fact and dimension tables to optimize performance and enable scalable analysis.",
+                        "<strong>Power Query Transformation</strong>: Transformed raw, unstructured data into a clean, organized format using advanced Power Query techniques.",
+                        "<strong>Advanced Power Query Functions</strong>: Developed custom functions to dynamically retrieve latitude and longitude data from a web API.",
+                        "<strong>Interactive Dashboards</strong>: Created dynamic Power BI dashboards to visualize sales performance, customer behavior, and profitability metrics.",
+                        "<STRONG>Custom Filter Pane</STRONG>: Implemented a pop-up filter pane to enhance user interactivity and provide intuitive filtering capabilities.",
+                        "<strong>Comprehensive Analysis</strong>: Conducted in-depth analysis to uncover trends, operational insights, and support data-driven decision-making.",
+                        "<strong>Scalable and Efficient Design</strong>: Built a scalable data model capable of handling future growth while ensuring optimal performance."
+                    ],
+                },
+                tools: {
+                    title: "Tools Used",
+                    items: [
+                        {tool: "Power BI", img: powerbi},
+                        {tool: "Power Query", img: powerquery},
+                    ],
+                },
+                    gitUrl: "https://github.com/AhmedAliAli811/Flipmart ",
+            },
             {
                 title: "E-commerce Sales and Inventory Management Dashboard",
                 description:
@@ -210,6 +241,7 @@ import whatsapp from "@/images/icons/icons8-whatsapp-logo-94.png";
             {skill: "Python", img: python},
             {skill: "SQL Server", img: sql},
             {skill: "Power Bi", img: powerbi},
+            {skill: "Power Query", img: powerquery},
             {skill: "Excel", img: excel},
             {skill: "Data Analytics", img: dataanalytics},
             {skill: "SSRS", img: ssrs},
