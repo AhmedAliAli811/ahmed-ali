@@ -56,8 +56,10 @@ const Project: React.FC<ProjectProps> = ({params}) => {
                 </div>
                 <div className="flex flex-col ">
                     <h2 className="font-bold text-xl">Description</h2>
-                    <p className="my-3">{project.description}</p>
-
+                    <p
+                        className="my-3 text-lg"
+                        dangerouslySetInnerHTML={{__html: project.description}}
+                    />
                     {/* GitHub Link Button */}
                     <a
                         href={project.gitUrl}
@@ -74,10 +76,13 @@ const Project: React.FC<ProjectProps> = ({params}) => {
             {/* Key Features Section */}
             <div className="w-full lg:w-11/12  mt-7">
                 <h2 className="text-2xl font-bold">Key Features</h2>
+
                 <ul className="list-disc list-inside space-y-2 mt-3">
                     {project.features.items.map((feature, idx) => (
-                        <li key={idx}>{feature}</li>
-                    ))}
+                        <li
+                            key={idx}
+                            dangerouslySetInnerHTML={{__html: feature}} // Render as HTML
+                        />))}
                 </ul>
             </div>
             {/* Tools Section */}
