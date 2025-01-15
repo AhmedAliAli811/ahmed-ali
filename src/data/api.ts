@@ -20,6 +20,9 @@ import p61 from "@/images/project6/Main.png"
 import p62 from "@/images/project6/Filter.png"
 import p63 from "@/images/project6/Filtered.png"
 import p64 from "@/images/project6/DataModel.png"
+import p65 from "@/images/project6/Mock.png"
+
+
 
 import linkedin from "@/images/icons/icons8-linkedin-logo-48.png";
 import github from "@/images/icons/icons8-github-logo-94.png";
@@ -83,7 +86,7 @@ const api = {
             {
                 title: "FlipMart E-commerce Sales Dashboard",
                 description: `The main purpose of this project was to apply <strong>data modeling</strong> and <strong>data warehouse concepts</strong> to structure and analyze e-commerce business data effectively. Using <strong>Power BI</strong> and <strong>Power Query</strong>, I transformed raw, unstructured data into a well-organized data model, implementing a <strong>star schema</strong> to enable efficient querying and scalable analysis. This involved creating fact and dimension tables to represent sales, customers, products, and time, ensuring optimal performance for analytical queries. Additionally, I conducted in-depth analysis to uncover insights into sales performance, customer behavior, operational efficiency, and profitability. Through interactive dashboards and visualizations in <strong>Power BI</strong>. This project highlights my ability to leverage <strong>Power BI</strong> and <strong>Power Query</strong> for data modeling, analysis, and visualization, driving data-driven decision-making and business growth.`,
-                imgs: [p61 , p62 , p63 , p64],
+                imgs: [p65 , p61 , p62 , p63 , p64],
                 features: {
                     title: "Key Features",
                     items: [
