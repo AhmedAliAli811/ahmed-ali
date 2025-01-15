@@ -74,7 +74,7 @@ const api = {
         ],
         cv: {
             title: "View my CV",
-            link: "https://drive.google.com/file/d/1VU1sbQOVgjzrLpWp_v2eK-eHPTxsoVKd/view?usp=sharing",
+            link: "https://drive.google.com/file/d/1LKACWz6b0PbbYS-O2x_-NrHmsXZuFoOk/view?usp=sharing",
         },
     },
     projects: {
