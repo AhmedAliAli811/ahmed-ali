@@ -77,7 +77,7 @@ const api = {
         ],
         cv: {
             title: "View my CV",
-            link: "https://drive.google.com/file/d/1LKACWz6b0PbbYS-O2x_-NrHmsXZuFoOk/view?usp=sharing",
+            link: "https://drive.google.com/file/d/1HdqJjU_ONRrZwWUHrw7epatvGhwVI6ht/view?usp=sharing",
         },
     },
     projects: {
@@ -106,7 +106,7 @@ const api = {
                         {tool: "Power Query", img: powerquery},
                     ],
                 },
-                    gitUrl: "https://github.com/AhmedAliAli811/Flipmart ",
+                gitUrl: "https://github.com/AhmedAliAli811/Flipmart",
             },
             {
                 title: "E-commerce Sales and Inventory Management Dashboard",

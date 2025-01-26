@@ -70,7 +70,6 @@ const Project: React.FC<ProjectProps> = ({params}) => {
                 </div>
             </div>
 
-            {/* Description Section */}
 
 
             {/* Key Features Section */}
@@ -85,6 +84,7 @@ const Project: React.FC<ProjectProps> = ({params}) => {
                         />))}
                 </ul>
             </div>
+
             {/* Tools Section */}
             <div className="w-full  mt-4">
                 <h2 className="text-2xl font-bold">Tools Used</h2>
