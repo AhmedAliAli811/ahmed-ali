@@ -21,6 +21,8 @@ import p62 from "@/images/project6/Filter.png"
 import p63 from "@/images/project6/Filtered.png"
 import p64 from "@/images/project6/DataModel.png"
 import p65 from "@/images/project6/Mock.png"
+import p66 from "@/images/project6/ExcelMain.png"
+import p67 from "@/images/project6/ExcelModel.png"
 
 
 
@@ -31,6 +33,7 @@ import mail from "@/images/icons/icons8-mail-50.png";
 import dataanalytics from "@/images/icons/icons8-data-analytics-53.png";
 import powerbi from "@/images/icons/icons8-power-bi-2021-48.png";
 import powerquery from "@/images/icons/icons8-query-inner-join-right-48.png";
+import powerpivot from "@/images/icons/power-pivot-2016-logo-spacer.png";
 import sql from "@/images/icons/icons8-sql-server-48.png";
 import mysql from "@/images/icons/icons8-mysql-48.png";
 import postgresql from "@/images/icons/icons8-postgresql-100.png";
@@ -85,8 +88,8 @@ const api = {
         items: [
             {
                 title: "FlipMart E-commerce Sales Dashboard",
-                description: `The main purpose of this project was to apply <strong>data modeling</strong> and <strong>data warehouse concepts</strong> to structure and analyze e-commerce business data effectively. Using <strong>Power BI</strong> and <strong>Power Query</strong>, I transformed raw, unstructured data into a well-organized data model, implementing a <strong>star schema</strong> to enable efficient querying and scalable analysis. This involved creating fact and dimension tables to represent sales, customers, products, and time, ensuring optimal performance for analytical queries. Additionally, I conducted in-depth analysis to uncover insights into sales performance, customer behavior, operational efficiency, and profitability. Through interactive dashboards and visualizations in <strong>Power BI</strong>. This project highlights my ability to leverage <strong>Power BI</strong> and <strong>Power Query</strong> for data modeling, analysis, and visualization, driving data-driven decision-making and business growth.`,
-                imgs: [p65 , p61 , p62 , p63 , p64],
+                description: `The main purpose of this project was to apply <strong>data modeling</strong> and <strong>data warehouse concepts</strong> to structure and analyze e-commerce business data effectively. Using <strong>Excel,</strong> <strong>Power Pivot,</strong> <strong>Power BI</strong> and <strong>Power Query</strong>, I transformed raw, unstructured data into a well-organized data model, implementing a <strong>star schema</strong> to enable efficient querying and scalable analysis. This involved creating fact and dimension tables to represent sales, customers, products, and time, ensuring optimal performance for analytical queries. Additionally, I conducted in-depth analysis to uncover insights into sales performance, customer behavior, operational efficiency, and profitability. Through interactive dashboards and visualizations in <strong>Excel</strong> and <strong>Power BI</strong>. This project highlights my ability to leverage <strong>Excel,</strong> <strong>Power Pivot,</strong> <strong>Power BI</strong> and <strong>Power Query</strong>, for data modeling, analysis, and visualization, driving data-driven decision-making and business growth.`,
+                    imgs: [p65 , p66 , p67 , p61 , p62 , p63 , p64],
                 features: {
                     title: "Key Features",
                     items: [
@@ -102,6 +105,8 @@ const api = {
                 tools: {
                     title: "Tools Used",
                     items: [
+                        {tool: "Excel", img: excel},
+                        {tool: "Power Pivot", img: powerpivot},
                         {tool: "Power BI", img: powerbi},
                         {tool: "Power Query", img: powerquery},
                     ],
@@ -246,6 +251,7 @@ const api = {
             {skill: "Power Bi", img: powerbi},
             {skill: "Power Query", img: powerquery},
             {skill: "Excel", img: excel},
+            {skill: "Power Pivot", img: powerpivot},
             {skill: "Data Analytics", img: dataanalytics},
             {skill: "SSRS", img: ssrs},
             {skill: "Github", img: github},
