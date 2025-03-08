@@ -229,16 +229,22 @@ const api = {
         title: "Experience",
         items: [
             {
-                role: "Bachelor of Computer Science",
-                date: "9/2020 - 5/2024",
-                company:
-                    "Faculty of Computers and Artificial Intelligence - Cairo University",
+                role: "Data Analyst",
+                date: "3/2025 - Present",
+                company: "Otobessy",
                 city: "Cairo-Egypt",
             },
             {
                 role: "BI Internship",
                 date: "4/2024 - 10/2024",
                 company: "Digital Egypt Pioneers Initiative (DEPI)",
+                city: "Cairo-Egypt",
+            },
+            {
+                role: "Bachelor of Computer Science",
+                date: "9/2020 - 5/2024",
+                company:
+                    "Faculty of Computers and Artificial Intelligence - Cairo University",
                 city: "Cairo-Egypt",
             },
         ],
