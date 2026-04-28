@@ -80,7 +80,7 @@ const api = {
         ],
         cv: {
             title: "View my CV",
-            link: "https://drive.google.com/file/d/1HdqJjU_ONRrZwWUHrw7epatvGhwVI6ht/view?usp=sharing",
+            link: "https://drive.google.com/file/d/1wPnHBMM7lRyNScZnaFcUtU07VePGgDAO/view?usp=drivesdk",
         },
     },
     projects: {
@@ -274,10 +274,13 @@ const api = {
         ],
     },
     about: {
-        title: "About Me",
-        description:
-            "Recent graduate from the Faculty of Computer and Artificial Intelligence with a strong background in data analysis, report generation, and problem-solving. Proficient in SQL, data visualization tools, and key computer science concepts such as algorithms, data structures, and database management. Focused on delivering insights that drive informed decision-making and support business success.",
-    },
+    title: "About Me",
+    description:
+        "Data Analyst and aspiring Data Engineer with a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University. Strong foundation in data analysis, data engineering, and building scalable data-driven solutions. " +
+        "Experienced in working with end-to-end data workflows, including data extraction, transformation, and loading (ETL), data modeling, and reporting. Skilled in designing and maintaining data pipelines and data warehouse solutions to support business intelligence and decision-making processes. " +
+        "Proficient in Python, SQL, Excel, and Power BI for data analysis and visualization, with hands-on experience in Microsoft BI stack tools including SSIS, SSRS, and SSAS. Familiar with Apache Airflow for workflow orchestration and automation of data pipelines. " +
+        "Combines analytical thinking with engineering practices to deliver clean, reliable, and well-structured data systems that enable actionable insights and improve business performance.",
+},
     copyrights: "© 2024 Ahmed Ali. All Rights Reserved.",
 };
 export default api;
