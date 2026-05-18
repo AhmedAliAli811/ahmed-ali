@@ -50,12 +50,19 @@ import plotly from "@/images/icons/plotly_.png";
 import looker from "@/images/icons/icons8-google-looker-48.png";
 import whatsapp from "@/images/icons/icons8-whatsapp-logo-94.png";
 
+
+import docker  from "@/images/icons/icons8-docker-48.png";
+import airflow from "@/images/icons/icons8-apache-airflow-48.png";
+import bigquery from "@/images/icons/icons8-bigquery-48.png";
+import snowflake from "@/images/icons/snowflake.jpg";
+import dbt from "@/images/icons/dbt-logo-png_seeklogo-431111.png";
+
 const api = {
     hero: {
         title: "Hi, I'm ",
         name: "Ahmed Ali Ali",
         description:
-            "A Fresh BI Engineer and Data Analyst with a knack for building insights.",
+            "A Data Analyst and aspiring Data Engineer with a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University.",
         social: [
             {
                 link: "https://github.com/AhmedAliAli811",
@@ -80,7 +87,7 @@ const api = {
         ],
         cv: {
             title: "View my CV",
-            link: "https://drive.google.com/file/d/1HdqJjU_ONRrZwWUHrw7epatvGhwVI6ht/view?usp=sharing",
+            link: "https://drive.google.com/file/d/16pTEX_Sm0PvO_fUhbhYAmb4k6IiA8A4b/view?usp=drive_link",
         },
     },
     projects: {
@@ -252,6 +259,13 @@ const api = {
             {skill: "Power Query", img: powerquery},
             {skill: "Excel", img: excel},
             {skill: "Power Pivot", img: powerpivot},
+
+            {skill: "Airflow", img: python},
+            {skill: "DBT", img: sql},
+            {skill: "Docker", img: powerbi},
+            {skill: "Snowflake", img: powerquery},
+            {skill: "BigQuery", img: excel},
+
             {skill: "Data Analytics", img: dataanalytics},
             {skill: "SSRS", img: ssrs},
             {skill: "Github", img: github},
@@ -270,8 +284,11 @@ const api = {
     about: {
         title: "About Me",
         description:
-            "Recent graduate from the Faculty of Computer and Artificial Intelligence with a strong background in data analysis, report generation, and problem-solving. Proficient in SQL, data visualization tools, and key computer science concepts such as algorithms, data structures, and database management. Focused on delivering insights that drive informed decision-making and support business success.",
+        "Data Analyst and aspiring Data Engineer with a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University. Strong foundation in data analysis, data engineering, and building scalable data-driven solutions. " +
+        "Experienced in working with end-to-end data workflows, including data extraction, transformation, and loading (ETL), data modeling, and reporting. Skilled in designing and maintaining data pipelines and data warehouse solutions to support business intelligence and decision-making processes. " +
+        "Proficient in Python, SQL, Excel, and Power BI for data analysis and visualization, with hands-on experience in Microsoft BI stack tools including SSIS, SSRS, and SSAS. Familiar with Apache Airflow for workflow orchestration and automation of data pipelines. " +
+        "Combines analytical thinking with engineering practices to deliver clean, reliable, and well-structured data systems that enable actionable insights and improve business performance.",
     },
-    copyrights: "© 2024 Ahmed Ali. All Rights Reserved.",
+    copyrights: "© 2026 Ahmed Ali. All Rights Reserved.",
 };
 export default api;
