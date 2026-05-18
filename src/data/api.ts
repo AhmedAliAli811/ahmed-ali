@@ -266,11 +266,11 @@ const api = {
             {skill: "Excel", img: excel},
             {skill: "Power Pivot", img: powerpivot},
 
-            {skill: "Airflow", img: python},
-            {skill: "DBT", img: sql},
-            {skill: "Docker", img: powerbi},
-            {skill: "Snowflake", img: powerquery},
-            {skill: "BigQuery", img: excel},
+            {skill: "Airflow", img: airflow},
+            {skill: "DBT", img: dbt},
+            {skill: "Docker", img: docker},
+            {skill: "Snowflake", img: snowflake},
+            {skill: "BigQuery", img: bigquery},
 
             {skill: "Data Analytics", img: dataanalytics},
             {skill: "SSRS", img: ssrs},
