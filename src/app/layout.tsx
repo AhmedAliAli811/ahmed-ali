@@ -5,7 +5,7 @@ import {Analytics} from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
     title: "Ahmed Ali",
-    description: "Data Analyst",
+    description: "BI Engineer",
 };
 
 export default function RootLayout({
