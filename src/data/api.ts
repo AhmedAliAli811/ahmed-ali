@@ -24,6 +24,11 @@ import p65 from "@/images/project6/Mock.png"
 import p66 from "@/images/project6/ExcelMain.png"
 import p67 from "@/images/project6/ExcelModel.png"
 
+import p71 from "@/images/project7/architecture.png"
+import p72 from "@/images/project7/dbt-lineage.png"
+import p73 from "@/images/project7/airflow-dag.png"
+import p74 from "@/images/project7/powerbi-data-model.png"
+import p75 from "@/images/project7/powerbi-dashboard.png"
 
 
 import linkedin from "@/images/icons/icons8-linkedin-logo-48.png";
@@ -62,7 +67,7 @@ const api = {
         title: "Hi, I'm ",
         name: "Ahmed Ali Ali",
         description:
-            "A Data Analyst and aspiring Data Engineer with a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University.",
+            "A BI Engineer and aspiring Data Engineer with a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University.",
         social: [
             {
                 link: "https://github.com/AhmedAliAli811",
@@ -87,12 +92,46 @@ const api = {
         ],
         cv: {
             title: "View my CV",
-            link: "https://drive.google.com/file/d/16pTEX_Sm0PvO_fUhbhYAmb4k6IiA8A4b/view?usp=drive_link",
+            link: "https://drive.google.com/file/d/1rcsSsKfVP_75t5HZSkbRB8KuD2Rv2EjM/view?usp=sharing",
         },
     },
     projects: {
-        title: "Projects",
-        items: [
+                title: "Projects",
+                items: [
+                {
+                    title: "COVID-19 End-to-End Data Engineering Pipeline",
+                    description: `This project demonstrates a complete <strong>End-to-End Data Engineering Pipeline</strong> built using modern data engineering tools and best practices. The pipeline automatically extracts the latest COVID-19 daily reports from the <strong>Johns Hopkins University GitHub repository</strong>, loads the raw data into <strong>PostgreSQL</strong>, transforms it through a layered <strong>dbt ELT architecture</strong>, orchestrates the entire workflow using <strong>Apache Airflow</strong>, and delivers analytics-ready data for visualization in <strong>Power BI</strong>. The project implements a <strong>star schema</strong> consisting of dimension and fact tables, applies data quality testing with <strong>dbt</strong>, standardizes country names using <strong>dbt Seeds</strong>, and generates automatic documentation and lineage. Finally, the curated reporting models are consumed by an interactive <strong>Power BI</strong> dashboard, showcasing a complete production-like data engineering workflow from data ingestion to business reporting.`,
+                    imgs: [p71, p72, p73, p74, p75],
+                    features: {
+                        title: "Key Features",
+                        items: [
+                            "<strong>End-to-End ELT Pipeline</strong>: Built a complete automated pipeline from data extraction to business-ready dashboards.",
+                            "<strong>Automated Data Ingestion</strong>: Downloads the latest COVID-19 daily reports directly from the Johns Hopkins University GitHub repository.",
+                            "<strong>PostgreSQL Data Warehouse</strong>: Stores data in a layered warehouse architecture including Raw, Staging, Intermediate, Mart, and Metadata schemas.",
+                            "<strong>dbt Transformations</strong>: Implements a modular transformation workflow using staging, intermediate, dimensions, facts, and reporting models.",
+                            "<strong>Star Schema Modeling</strong>: Designed a dimensional model with Date and Country dimensions alongside a Daily COVID fact table for analytical reporting.",
+                            "<strong>dbt Seeds & Data Standardization</strong>: Uses seed files to standardize country names and enrich the dataset with consistent business logic.",
+                            "<strong>Data Quality Testing</strong>: Applies dbt tests to validate source data, model integrity, and data quality throughout the pipeline.",
+                            "<strong>Workflow Orchestration</strong>: Automates the entire ELT process using Apache Airflow with Task Groups for Data Ingestion and dbt Transformations.",
+                            "<strong>Automated Documentation</strong>: Generates interactive dbt documentation and lineage graphs for complete pipeline transparency.",
+                            "<strong>Interactive Power BI Dashboard</strong>: Builds an analytics dashboard on top of the reporting layer to visualize global COVID-19 trends and insights.",
+                            "<strong>Dockerized Environment</strong>: Containerized all services including PostgreSQL, dbt, and Apache Airflow using Docker Compose for reproducible deployment.",
+                            "<strong>Scalable Project Structure</strong>: Organized using production-inspired architecture to support maintainability, scalability, and future enhancements."
+                        ],
+                    },               
+                    tools: {
+                        title: "Tools Used",
+                        items: [
+                            {tool: "Python", img: python},
+                            {tool: "PostgreSQL", img: postgresql},
+                            {tool: "dbt", img: dbt},
+                            {tool: "Apache Airflow", img: airflow},
+                            {tool: "Docker", img: docker},
+                            {tool: "Power BI", img: powerbi},
+                        ],
+                    },
+                    gitUrl: "https://github.com/AhmedAliAli811/COVID19_Data_Engineering_Project",
+            },
             {
                 title: "FlipMart E-commerce Sales Dashboard",
                 description: `The main purpose of this project was to apply <strong>data modeling</strong> and <strong>data warehouse concepts</strong> to structure and analyze e-commerce business data effectively. Using <strong>Excel,</strong> <strong>Power Pivot,</strong> <strong>Power BI</strong> and <strong>Power Query</strong>, I transformed raw, unstructured data into a well-organized data model, implementing a <strong>star schema</strong> to enable efficient querying and scalable analysis. This involved creating fact and dimension tables to represent sales, customers, products, and time, ensuring optimal performance for analytical queries. Additionally, I conducted in-depth analysis to uncover insights into sales performance, customer behavior, operational efficiency, and profitability. Through interactive dashboards and visualizations in <strong>Excel</strong> and <strong>Power BI</strong>. This project highlights my ability to leverage <strong>Excel,</strong> <strong>Power Pivot,</strong> <strong>Power BI</strong> and <strong>Power Query</strong>, for data modeling, analysis, and visualization, driving data-driven decision-making and business growth.`,
@@ -237,7 +276,7 @@ const api = {
         items: [
             {
                 role: "Data Analyst",
-                date: "3/2025 - Present",
+                date: "3/2025 - 7/2026",
                 company: "Otobessy",
                 city: "Cairo-Egypt",
             },
@@ -290,7 +329,7 @@ const api = {
     about: {
         title: "About Me",
         description:
-        "Data Analyst and aspiring Data Engineer with a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University. Strong foundation in data analysis, data engineering, and building scalable data-driven solutions. " +
+        "BI Engineer and aspiring Data Engineer with a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University. Strong foundation in data analysis, data engineering, and building scalable data-driven solutions. " +
         "Experienced in working with end-to-end data workflows, including data extraction, transformation, and loading (ETL), data modeling, and reporting. Skilled in designing and maintaining data pipelines and data warehouse solutions to support business intelligence and decision-making processes. " +
         "Proficient in Python, SQL, Excel, and Power BI for data analysis and visualization, with hands-on experience in Microsoft BI stack tools including SSIS, SSRS, and SSAS. Familiar with Apache Airflow for workflow orchestration and automation of data pipelines. " +
         "Combines analytical thinking with engineering practices to deliver clean, reliable, and well-structured data systems that enable actionable insights and improve business performance.",
