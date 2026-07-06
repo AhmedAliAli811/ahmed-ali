@@ -15,6 +15,7 @@ const About = () => {
         <p className="text-sm md:text-xl w-full md:w-2/3 mt-4 text-center md:text-left leading-relaxed">
           {api.about.description}
         </p>
+        
       </Column>
     </Section>
   );
