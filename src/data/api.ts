@@ -14,8 +14,6 @@ import P41 from "@/images/project2/1-Home.png";
 import P42 from "@/images/project2/2-Actions.png";
 import P43 from "@/images/project2/3- Details.png";
 
-import p5 from "@/images/project5/dashboard.png";
-
 import p61 from "@/images/project6/Main.png"
 import p62 from "@/images/project6/Filter.png"
 import p63 from "@/images/project6/Filtered.png"
@@ -65,7 +63,7 @@ import dbt from "@/images/icons/dbt-logo-png_seeklogo-431111.png";
 const api = {
     hero: {
         title: "Hi, I'm ",
-        name: "Ahmed Ali Ali",
+        name: "Ahmed Ali",
         description:
             "A BI Engineer and aspiring Data Engineer with a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University.",
         social: [
@@ -243,30 +241,6 @@ const api = {
                     items: [{tool: "Power Bi", img: powerbi}],
                 },
                 gitUrl: "https://github.com/AhmedAliAli811/HR_PowerBI_Dashboard",
-            },
-            {
-                "title": "Applying some principles of the book \"Storytelling with Data\" to the price of gold and the exchange rate in Egypt",
-                "description": "This project is an exploration of the relationship between gold prices and exchange rates for USD and EUR against the Egyptian Pound, using principles from the book *Storytelling with Data* to craft clear and insightful visualizations. I retrieved real-time gold price data through web scraping and sourced exchange rates from the Central Bank of Egypt. The primary goal is to applying key concepts from *Storytelling with Data*, such as context, clarity, and simplicity, I demonstrate how to present data in a way that is both informative and accessible.",
-                "imgs": [p5],
-                "features": {
-                    "title": "Key Features",
-                    "items": [
-                        "Web Scraping for Real-Time Data: I used web scraping techniques to fetch up-to-date gold price data, ensuring the analysis reflects the most current market conditions.",
-                        "Exchange Rates Integration: I collected USD and EUR exchange rates from the Central Bank of Egypt and integrated them with gold price data to analyze trends and correlations between currency values and gold prices.",
-                        "Standardization for Comparison: Since gold prices and exchange rates have different scales, I performed standardization on the prices to ensure a fair comparison. This allows for meaningful insights when comparing the relative movements of gold prices and currencies.",
-                        "Data Transformation with Power Query: In Power Query, I cleaned and transformed the data to ensure consistency and accuracy, preparing it for further analysis.",
-                        "Storytelling through Visualizations: Following the *Storytelling with Data* philosophy, I created simple and clear visualizations to highlight key insights, focusing on clarity and minimizing clutter.",
-                        "Data at a Glance: I designed the visualizations to provide a clear and concise overview of the current exchange rates for the US dollar, Euro, and 24-karat gold against the Egyptian Pound, with the date (05/12/2024) prominently displayed, making it easy for users to understand the current values at a glance.",
-                        "Clear Labeling: The chart includes concise titles, such as the date and currency names, as well as the overall title 'مؤشر الدولار واليورو والذهب عيار 24 بالنسبة للجنيه المصري' (Index of Dollar, Euro, and 24-karat Gold against the Egyptian Pound), ensuring that the audience can easily grasp the content and purpose of the visualization."
-                    ]
-                },
-                "tools": {
-                    "title": "Tools Used",
-                    "items": [
-                        {"tool": "Power BI", "img": powerbi},
-                    ]
-                },
-                "gitUrl": "https://github.com/AhmedAliAli811/Egypt-Gold-Price-and-Exchange-Rate",
             }
             ,
         ],
