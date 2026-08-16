@@ -28,6 +28,15 @@ import p73 from "@/images/project7/airflow-dag.png"
 import p74 from "@/images/project7/powerbi-data-model.png"
 import p75 from "@/images/project7/powerbi-dashboard.png"
 
+import p81 from "@/images/project8/1-pipeline-overview.png"
+import p82 from "@/images/project8/2-Schema.png"
+import p83 from "@/images/project8/3-Master-Package.png"
+import p84 from "@/images/project8/4-TransformLoadControlFlow.png"
+import p85 from "@/images/project8/5-TransformLoadDataFlow.png"
+import p86 from "@/images/project8/6-Staging.png"
+import p87 from "@/images/project8/7-AuditLogs.png"
+import p88 from "@/images/project8/8-Jop.png"
+
 
 import linkedin from "@/images/icons/icons8-linkedin-logo-48.png";
 import github from "@/images/icons/icons8-github-logo-94.png";
@@ -41,6 +50,8 @@ import sql from "@/images/icons/icons8-sql-server-48.png";
 import mysql from "@/images/icons/icons8-mysql-48.png";
 import postgresql from "@/images/icons/icons8-postgresql-100.png";
 import ssrs from "@/images/icons/ssrs.png";
+import ssis from "@/images/icons/ssis.png";
+import sqlagent from "@/images/icons/sqlagent.png";
 import python from "@/images/icons/icons8-python-48.png";
 import excel from "@/images/icons/icons8-excel-48.png";
 import pandas from "@/images/icons/icons8-pandas-48.png";
@@ -130,6 +141,36 @@ const api = {
                     },
                     gitUrl: "https://github.com/AhmedAliAli811/COVID19_Data_Engineering_Project",
             },
+            {
+                    title: "Retail Data Warehouse ETL Pipeline",
+                    description: `This project demonstrates a complete <strong>End-to-End ETL Pipeline</strong> built in <strong>SQL Server Integration Services (SSIS)</strong>, taking raw retail sales CSV files through staging, validation, and transformation into a fully modeled <strong>star schema data warehouse</strong>. The pipeline processes each source file as an isolated, auditable run, with a dedicated <strong>audit log</strong> tracking row counts and status per execution, and a <strong>row-level error log</strong> capturing granular, rule-specific rejection reasons instead of generic failures. The customer dimension implements a true <strong>Type 2 Slowly Changing Dimension</strong>, correctly handling multiple attribute changes within a single load. During development, a subtle data-integrity bug was diagnosed — one that mimicked a classic race condition but actually stemmed from <strong>SSIS's buffer-based row processing</strong> rather than transaction concurrency — and was resolved by re-architecting the dimension-loading sequence. The finished pipeline is <strong>idempotent</strong> (safe to rerun without duplicating data), deployed to <strong>SSISDB</strong>, and scheduled via <strong>SQL Server Agent</strong>.`,
+                    imgs: [p81, p82, p83, p84, p85, p86, p87, p88],
+                    features: {
+                        title: "Key Features",
+                        items: [
+                            "<strong>End-to-End SSIS Pipeline</strong>: Orchestrated a full CSV-to-data-warehouse pipeline across staging, validation, dimension loading, and fact loading.",
+                            "<strong>Per-Run Audit Logging</strong>: Every file processed generates a unique run ID with tracked start/end time, row counts, and status in a dedicated audit table.",
+                            "<strong>Granular Error Routing</strong>: Invalid rows are routed to an error log with specific, rule-level rejection reasons rather than generic failure messages.",
+                            "<strong>Type 2 Slowly Changing Dimension</strong>: Implemented full SCD2 history tracking for the customer dimension, including correct chronological handling of multiple changes within the same load.",
+                            "<strong>Business Rule Validation</strong>: Custom validation logic distinguishing sales from cancellations/returns, applying different rules to each while keeping both in a single fact table.",
+                            "<strong>Diagnosed a Buffer-Level Concurrency Bug</strong>: Identified and resolved a data-integrity issue caused by SSIS's row-buffering behavior, redesigning the dimension-load sequencing to eliminate duplicate inserts.",
+                            "<strong>Idempotent Design</strong>: Built skip-if-already-processed logic so the entire pipeline can be safely rerun without creating duplicate data.",
+                            "<strong>Fault-Isolated Batch Processing</strong>: A single failed file does not halt the batch — errors are logged and the pipeline continues processing remaining files.",
+                            "<strong>Star Schema Data Warehouse</strong>: Modeled Date, Customer, and Product dimensions alongside a Sales fact table for analytical reporting.",
+                            "<strong>Production Deployment</strong>: Deployed to the SSIS Catalog (SSISDB) and scheduled for automated execution via SQL Server Agent."
+                        ],
+                    },               
+                    tools: {
+                        title: "Tools Used",
+                        items: [
+                            {tool: "SSIS", img: ssis},
+                            {tool: "SQL Server", img: sql},
+                            {tool: "SQL Server Agent", img: sqlagent},
+                            {tool: "Python", img: python},
+                            {tool: "Git", img: github},
+                        ],
+                    },
+                    gitUrl: "https://github.com/AhmedAliAli811/UCI_Retail_SSIS",            },
             {
                 title: "FlipMart E-commerce Sales Dashboard",
                 description: `The main purpose of this project was to apply <strong>data modeling</strong> and <strong>data warehouse concepts</strong> to structure and analyze e-commerce business data effectively. Using <strong>Excel,</strong> <strong>Power Pivot,</strong> <strong>Power BI</strong> and <strong>Power Query</strong>, I transformed raw, unstructured data into a well-organized data model, implementing a <strong>star schema</strong> to enable efficient querying and scalable analysis. This involved creating fact and dimension tables to represent sales, customers, products, and time, ensuring optimal performance for analytical queries. Additionally, I conducted in-depth analysis to uncover insights into sales performance, customer behavior, operational efficiency, and profitability. Through interactive dashboards and visualizations in <strong>Excel</strong> and <strong>Power BI</strong>. This project highlights my ability to leverage <strong>Excel,</strong> <strong>Power Pivot,</strong> <strong>Power BI</strong> and <strong>Power Query</strong>, for data modeling, analysis, and visualization, driving data-driven decision-making and business growth.`,
