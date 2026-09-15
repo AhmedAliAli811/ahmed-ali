@@ -1,47 +1,68 @@
-/*"use client";
-
-import api from "@/data/api";
-import Link from "next/link";
-import Image from "next/image";
-import { Grid, Header, Section } from "@/components";
-
-const Projects = () => {
-  return (
-    <Section id="projects">
-      <Header>
-        <span>{api.projects.title}</span>
-      </Header>
-      <Grid style="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 md:mt-10">
-        {api.projects.items.map((e, index) => (
-          <div key={index} className="rounded flex flex-col gap-1">
-            <Link
-              href={`/projects/${index}`}
-              className="w-fit h-fit mx-auto p-2 text-center text-lg hover:bg-stone-50 hover:text-[#1f1f1f] font-bold"
-            >
-              <Image
-                src={e.imgs[0]}
-                height={350}
-                alt={e.title}
-                priority
-              />
-              <span className="mt-5">{e.title}</span>
-            </Link>
-          </div>
-        ))}
-      </Grid>
-    </Section>
-  );
-};
-
-export default Projects;
-*/
 "use client";
 
+import { useState, useEffect, useRef } from "react";
 import api from "@/data/api";
 import Link from "next/link";
 import Image from "next/image";
 import { Grid, Header, Section } from "@/components";
 import { ArrowUpRight } from "lucide-react";
+
+const AUTO_SWAP_INTERVAL = 2500; // ms
+
+const ProjectImage = ({ imgs, alt }: { imgs: { src: string }[]; alt: string }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const hasMultipleImages = imgs.length > 1;
+
+  useEffect(() => {
+    if (!hasMultipleImages || isPaused) return;
+
+    intervalRef.current = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % imgs.length);
+    }, AUTO_SWAP_INTERVAL);
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [hasMultipleImages, isPaused, imgs.length]);
+
+  return (
+    <div
+      className="relative w-full h-full"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      {imgs.map((img, i) => (
+        <Image
+          key={i}
+          src={img.src}
+          alt={alt}
+          fill
+          className={`object-cover transition-opacity duration-700 ease-in-out group-hover:scale-105 transition-transform ${
+            i === activeIndex ? "opacity-100" : "opacity-0"
+          }`}
+          priority={i === 0}
+        />
+      ))}
+
+      {/* Dots indicator, optional */}
+      {hasMultipleImages && (
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
+          {imgs.map((_, i) => (
+            <span
+              key={i}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === activeIndex ? "w-4 bg-white" : "w-1.5 bg-white/40"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Projects = () => {
   return (
@@ -62,18 +83,13 @@ const Projects = () => {
           >
             {/* Image */}
             <div className="relative w-full aspect-video overflow-hidden bg-black/20">
-              <Image
-                src={project.imgs[0]}
-                alt={project.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                priority
-              />
+              <ProjectImage imgs={project.imgs} alt={project.title} />
+
               {/* Gradient overlay + CTA */}
               <div
                 className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent
                            opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                           flex items-end justify-end p-3"
+                           flex items-end justify-end p-3 z-20 pointer-events-none"
               >
                 <span
                   className="flex items-center gap-1 text-xs font-semibold text-white

@@ -10,9 +10,6 @@ import p32 from "@/images/project3/movies.png";
 import p33 from "@/images/project3/cast.png";
 import p34 from "@/images/project3/schema.png";
 
-import P41 from "@/images/project2/1-Home.png";
-import P42 from "@/images/project2/2-Actions.png";
-import P43 from "@/images/project2/3- Details.png";
 
 import p61 from "@/images/project6/Main.png"
 import p62 from "@/images/project6/Filter.png"
@@ -37,6 +34,8 @@ import p86 from "@/images/project8/6-Staging.png"
 import p87 from "@/images/project8/7-AuditLogs.png"
 import p88 from "@/images/project8/8-Jop.png"
 
+import p91 from "@/images/project9/Architecture.jpg"
+import p92 from "@/images/project9/Dashboard.png"
 
 import linkedin from "@/images/icons/icons8-linkedin-logo-48.png";
 import github from "@/images/icons/icons8-github-logo-94.png";
@@ -63,7 +62,9 @@ import seaborn from "@/images/icons/seaborn-icon_.png";
 import plotly from "@/images/icons/plotly_.png";
 import looker from "@/images/icons/icons8-google-looker-48.png";
 import whatsapp from "@/images/icons/icons8-whatsapp-logo-94.png";
-
+import spark from "@/images/icons/icons8-apache-spark-48.png"
+import hadoop from "@/images/icons/icons8-hadoop-distributed-file-system-48.png"
+import kafka from "@/images/icons/icons8-apache-kafka-24.png"
 
 import docker  from "@/images/icons/icons8-docker-48.png";
 import airflow from "@/images/icons/icons8-apache-airflow-48.png";
@@ -76,7 +77,7 @@ const api = {
         title: "Hi, I'm ",
         name: "Ahmed Ali",
         description:
-            "A BI Engineer and aspiring Data Engineer with a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University.",
+            "A Data Engineer with a background in BI and a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University, focused on building data pipelines, processing large-scale data, and developing analytics solutions.",
         social: [
             {
                 link: "https://github.com/AhmedAliAli811",
@@ -101,12 +102,62 @@ const api = {
         ],
         cv: {
             title: "View my CV",
-            link: "https://drive.google.com/file/d/1Io7ITb4UKIiaDK4yttiHP75XnB5lhbuZ/view?usp=sharing",
+            link: "https://drive.google.com/file/d/11U5OilBSqDlnodN_nvMW5m8S-h5hBVvs/view?usp=drive_link",
         },
     },
     projects: {
                 title: "Projects",
                 items: [
+                    {
+                        title: "Nginx Log Processing Data Engineering Pipeline",
+                        description: `This project demonstrates an end-to-end <strong>Data Engineering Pipeline</strong> for processing approximately <strong>3.3 GB of Nginx access logs</strong> using <strong>Hadoop HDFS</strong> and <strong>Apache Spark</strong>. The pipeline ingests raw log data into HDFS, parses and validates the records, separates invalid records into a dedicated rejection layer, transforms valid data into a structured schema, and stores the processed data as <strong>Parquet files</strong> partitioned by year and month. An analytics layer is then built on top of the processed data to generate request volume, HTTP status, endpoint, and data quality metrics. Finally, the analytics outputs are connected directly to an interactive <strong>Power BI</strong> dashboard through <strong>WebHDFS</strong>. The project also focuses on running a large-scale batch workload in a resource-constrained local environment using Docker, including Spark resource tuning and HDFS integration.`,
+
+                        imgs: [p91, p92],
+
+                        features: {
+                            title: "Key Features",
+                            items: [
+                                "<strong>End-to-End Pipeline</strong>: Built a complete pipeline from raw Nginx logs to processed data, analytics, and Power BI reporting.",
+
+                                "<strong>Large-Scale Log Processing</strong>: Processed approximately <strong>3.3 GB</strong> of Nginx access logs using Apache Spark.",
+
+                                "<strong>HDFS Data Lake</strong>: Used Hadoop HDFS to store raw logs, processed data, rejected records, and analytics outputs.",
+
+                                "<strong>Log Parsing & Transformation</strong>: Parsed raw Nginx access logs into a structured schema containing IP, timestamp, HTTP method, URL, protocol, status code, response size, referrer, user agent, year, and month.",
+
+                                "<strong>Data Quality Validation</strong>: Validated timestamps, IP addresses, HTTP requests, status codes, and response sizes before loading records into the processed layer.",
+
+                                "<strong>Rejected Records Layer</strong>: Stored invalid records separately in Parquet format along with rejection reasons instead of silently dropping bad data.",
+
+                                "<strong>Parquet Storage</strong>: Stored processed and analytics data using Snappy-compressed Parquet for efficient analytical processing.",
+
+                                "<strong>Partitioning Strategy</strong>: Partitioned processed log data by <strong>year and month</strong> to organize the dataset for analytical workloads.",
+
+                                "<strong>Analytics Layer</strong>: Generated request volume by hour, HTTP status class counts, status code counts, top endpoints, and top rejected-data reasons.",
+
+                                "<strong>Power BI Integration</strong>: Connected Power BI directly to HDFS analytics outputs through <strong>WebHDFS</strong> for interactive visualization.",
+
+                                "<strong>Resource Optimization</strong>: Tuned Spark execution for a resource-constrained local environment using controlled parallelism, shuffle partitions, and driver memory.",
+
+                                "<strong>Dockerized Environment</strong>: Used Docker to run the Hadoop and Spark components locally and create a reproducible development environment.",
+
+                                "<strong>Technical Troubleshooting</strong>: Resolved Spark RPC and heartbeat issues caused by excessive local parallelism and resource constraints, as well as a WebHDFS DataNode hostname resolution issue when integrating with Power BI."
+                            ],
+                        },
+
+                        tools: {
+                            title: "Tools Used",
+                            items: [
+                                {tool: "Python", img: python},
+                                {tool: "Apache Spark", img: spark},
+                                {tool: "Hadoop HDFS", img: hadoop},
+                                {tool: "Docker", img: docker},
+                                {tool: "Power BI", img: powerbi},
+                            ],
+                        },
+
+                        gitUrl: "https://github.com/AhmedAliAli811/Server-Log-Processing-Using-Spark",
+                    },
                 {
                     title: "COVID-19 End-to-End Data Engineering Pipeline",
                     description: `This project demonstrates a complete <strong>End-to-End Data Engineering Pipeline</strong> built using modern data engineering tools and best practices. The pipeline automatically extracts the latest COVID-19 daily reports from the <strong>Johns Hopkins University GitHub repository</strong>, loads the raw data into <strong>PostgreSQL</strong>, transforms it through a layered <strong>dbt ELT architecture</strong>, orchestrates the entire workflow using <strong>Apache Airflow</strong>, and delivers analytics-ready data for visualization in <strong>Power BI</strong>. The project implements a <strong>star schema</strong> consisting of dimension and fact tables, applies data quality testing with <strong>dbt</strong>, standardizes country names using <strong>dbt Seeds</strong>, and generates automatic documentation and lineage. Finally, the curated reporting models are consumed by an interactive <strong>Power BI</strong> dashboard, showcasing a complete production-like data engineering workflow from data ingestion to business reporting.`,
@@ -263,25 +314,6 @@ const api = {
                     ],
                 },
                 gitUrl: "https://github.com/AhmedAliAli811/Movie-Analysis-Depi-GP",
-            },
-            {
-                title: "HR Dashboard",
-                description:
-                    "This project showcases an HR Analytics Dashboard created using Power BI to visualize important HR metrics such as employee demographics, promotion and layoff statuses, job levels, job satisfaction, and more. The goal was to help HR teams make data-driven decisions with ease by leveraging interactive and visually appealing data insights.",
-                imgs: [P41, P42, P43],
-                features: {
-                    title: "Key Features",
-                    items: [
-                        "Track promotion readiness and layoff trends.",
-                        "Analyze employee job satisfaction and service years.",
-                        "Improve HR decision-making and policy adjustments.",
-                    ],
-                },
-                tools: {
-                    title: "Tools used",
-                    items: [{tool: "Power Bi", img: powerbi}],
-                },
-                gitUrl: "https://github.com/AhmedAliAli811/HR_PowerBI_Dashboard",
             }
             ,
         ],
@@ -315,22 +347,28 @@ const api = {
         items: [
             {skill: "Python", img: python},
             {skill: "SQL Server", img: sql},
+
+            {skill: "Airflow", img: airflow},
+            {skill: "DBT", img: dbt},
+            {skill: "Spark", img: spark},
+            {skill: "Hadoop", img: hadoop},
+            {skill: "Kafka", img: kafka},
+
+            {skill: "Docker", img: docker},
+            {skill: "Snowflake", img: snowflake},
+            {skill: "BigQuery", img: bigquery},
+
+            {skill: "SSIS", img: ssis},
+            {skill: "SSRS", img: ssrs},
+            {skill: "Github", img: github},
+            {skill: "MySQL", img: mysql},
+            {skill: "PostgreSQL", img: postgresql},
+            {skill: "Data Analytics", img: dataanalytics},
             {skill: "Power Bi", img: powerbi},
             {skill: "Power Query", img: powerquery},
             {skill: "Excel", img: excel},
             {skill: "Power Pivot", img: powerpivot},
 
-            {skill: "Airflow", img: airflow},
-            {skill: "DBT", img: dbt},
-            {skill: "Docker", img: docker},
-            {skill: "Snowflake", img: snowflake},
-            {skill: "BigQuery", img: bigquery},
-
-            {skill: "Data Analytics", img: dataanalytics},
-            {skill: "SSRS", img: ssrs},
-            {skill: "Github", img: github},
-            {skill: "MySQL", img: mysql},
-            {skill: "PostgreSQL", img: postgresql},
             {skill: "Pandas", img: pandas},
             {skill: "NumPy", img: numpy},
             {skill: "Matplotlib", img: matplot},
@@ -342,13 +380,19 @@ const api = {
         ],
     },
     about: {
+
         title: "About Me",
+
         description:
-        "BI Engineer and aspiring Data Engineer with a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University. Strong foundation in data analysis, data engineering, and building scalable data-driven solutions. " +
-        "Experienced in working with end-to-end data workflows, including data extraction, transformation, and loading (ETL), data modeling, and reporting. Skilled in designing and maintaining data pipelines and data warehouse solutions to support business intelligence and decision-making processes. " +
-        "Proficient in Python, SQL, Excel, and Power BI for data analysis and visualization, with hands-on experience in Microsoft BI stack tools including SSIS, SSRS, and SSAS. Familiar with Apache Airflow for workflow orchestration and automation of data pipelines. " +
-        "Combines analytical thinking with engineering practices to deliver clean, reliable, and well-structured data systems that enable actionable insights and improve business performance.",
-    },
+        "Data Engineer with a background in Business Intelligence and a Bachelor’s degree in Artificial Intelligence from the Faculty of Computers and Artificial Intelligence, Cairo University. " +
+
+        "Experienced in building end-to-end data workflows, including data ingestion, transformation, data quality validation, data modeling, and analytics. Hands-on experience building data pipelines using Python, SQL, Apache Airflow, SSIS, Apache Spark, and Hadoop HDFS, along with designing data warehouse solutions and analytical data models. " +
+
+        "Strong foundation in Python, SQL, databases, ETL, and data processing, with experience using Power BI and Microsoft BI tools including SSIS, SSRS, and SSAS to deliver analytics and reporting solutions. " +
+
+        "Focused on building reliable and well-structured data pipelines and developing practical data engineering solutions that transform raw data into analytics-ready datasets."
+
+},
     copyrights: "© 2026 Ahmed Ali. All Rights Reserved.",
 };
 export default api;
